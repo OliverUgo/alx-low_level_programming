@@ -8,7 +8,6 @@ int main(void)
 {
 	char show[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(show, 4, 58, stdout);
-	fflush(stdout);
+	write(2, show, 59;
 	return (1);
 }
