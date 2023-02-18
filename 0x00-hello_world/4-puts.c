@@ -1,12 +1,11 @@
 #include<stdio.h>
-
 /**
  * main - Entry point
- * Return: Always o (Success)
+ *
+ * Return: Always 0 (Succsess)
  */
-int main (void)
+int main(void)
 {
-	char Mention [] = ""Programming is like building a multilingual puzzle\n");
-	puts();
-		return = 0;
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
