@@ -6,9 +6,9 @@
  */
 int main(void)
 {
-	char show[] = "and that piece of art is useful\"i - Dora Korpar, 2015-10-19\n";
+	char show[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fwrite(show, 4, 59, stdout);
+	fwrite(show, 4, 58, stdout);
 	fflush(stdout);
 	return (1);
 }
