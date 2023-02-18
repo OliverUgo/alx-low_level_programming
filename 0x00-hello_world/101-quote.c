@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char show[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char show[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
 	fwrite(show, 4, 57, stdout);
 	fflush(stdout);
