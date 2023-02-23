@@ -2,12 +2,15 @@
 /**
  * _abs - a function that computes the absolute value of an integer
  * @r: the variable to be computed
- * Return: Always 0 (Success)
+ * Return: always 0 (Success)
  */
-int _abs(int)
+int _abs(int r)
 {
-	int _abs(r);
-	{
-	_putchar(r);
+	if (r >= 0)
+	{	return (0);
 	}
+	else
+		{
+		return (r * -1);
+		}
 }
