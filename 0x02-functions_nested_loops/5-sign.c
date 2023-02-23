@@ -1,8 +1,8 @@
 #include "main.h"
 
 /**
- * main - Entry point
- *
+ * print_sign - a function that prints the sign of a number
+ * @n: number to be checked
  * Return: Always 0 (Success)
  */
 int print_sign(int n)
@@ -21,6 +21,4 @@ int print_sign(int n)
 		_putchar('0');
 		return (0);
 	}
-	_putchar('\n');
-return (0);
 }

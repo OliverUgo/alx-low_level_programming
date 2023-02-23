@@ -4,12 +4,16 @@
  *
  * Return: Always 0 (Success)
  */
-int _abs(int)
+int print_last_digit(int)
 {
-	int abs(r);
+	int n % 10;
+
+	if (n % 10 == 0)
 	{
-	_putchar(r);
+	_putchar('0');
 	}
+	else
+	_putchar 
 	_putchar('\n');
 return (0);
 }
