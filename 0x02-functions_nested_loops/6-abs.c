@@ -1,15 +1,13 @@
 #include "main.h"
 /**
- * _abs - Entry point
- *
+ * _abs - a function that computes the absolute value of an integer
+ * @r: the variable to be computed
  * Return: Always 0 (Success)
  */
 int _abs(int)
 {
-	int abs(r);
+	int _abs(r);
 	{
 	_putchar(r);
 	}
-	_putchar('\n');
-return (0);
 }
