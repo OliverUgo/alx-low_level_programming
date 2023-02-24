@@ -3,7 +3,7 @@
 /**
 * main - causes an infinite loop
 *
-* @i: this is the variable being looped
+* this is the variable being looped
 *
 *
 * Return: 0
