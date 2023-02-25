@@ -1,18 +1,27 @@
 #include "main.h"
+#include <stdlib.h>
+
 /**
- * print_most_numbers - a function that prints most numbers, from 0 to 9
- * @i: the character to be checked
+ * more_numbers - a function that prints the numbers, from 0 to 14
+ * the character to be checked
  * Return: no return
  */
-void print_most_numbers(void)
-{
-	int i;
 
-	for (i = '0'; i <= '14'; i++)
+void more_numbers(void)
+{
+	int i, r, s = 10;
+
+	for (r = 0; r < 10; r++)
 	{
-		if (i <= 14)
-		{	_putchar(i + '0');
+		for (i = 0; i <= 9; i++)
+		{
+			_putchar(i + '0');
+			if (s <= 14)
+				_putchar((s / 10) + '0');
+				_putchar((s % 10) + '0');
+			continue;
 		}
+		_putchar('\n');
 	}
 	_putchar('\n');
 }
