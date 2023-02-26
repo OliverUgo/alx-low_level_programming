@@ -2,20 +2,22 @@
 #include <stdlib.h>
 
 /**
- * print_diagonal - a function that prints straight line
- * @n: the number of times printed
+ * print_square - a function that prints a square
+ * @size: the number of times printed
  * Return: no return
  */
 
-void print_diagonal(int n)
+void print_square(int size)
 {
 	int x;
 
 	{
-		for (x = 0; x < n; x++)
+		for (x = 0; x <= size; x++)
 		{
-			_putchar('\\');
+			_putchar('#');
+			_putchar('\n');
 		}
+	}
+	if (size <= 0)
 		_putchar('\n');
-		}
 }
