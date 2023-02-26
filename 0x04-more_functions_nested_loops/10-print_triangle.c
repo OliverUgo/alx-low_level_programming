@@ -2,24 +2,26 @@
 #include <stdlib.h>
 
 /**
- * print_diagonal - a function that prints straight line
- * @n: the number of times printed
+ * print_triangle - a function that prints a triangle
+ * @size: the number of times printed
  * Return: no return
  */
 
-void print_diagonal(int n)
+void print_triangle(int size)
 {
 	int x, y;
 
-	for (x = 1; x <= n; x++)
+	for (x = 1; x <= size; x++)
 	{
-		for (y = 1; y < x; y++)
+		for (y = 0; y < x; y++)
 		{
 			_putchar(' ');
+			_putchar('#');
 		}
-		_putchar('\\');
-		_putchar('\n');
+		{
+			_putchar('\n');
+		}
 	}
-	if (n <= 0)
+	if (size <= 0)
 		_putchar('\n');
 }
