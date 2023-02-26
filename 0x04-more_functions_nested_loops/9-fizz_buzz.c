@@ -1,15 +1,12 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * more_numbers - a function that prints the numbers, from 0 to 14
- * @i: the character to be printed
- * @m_3: the multiple of 3 to be replaced
- * @m_3: the multiple of 5 to be replaced
- * @m_3_5: the multiples of 3 and 5 to be replaced
+ * main - a function that prints the numbers, from 1 to 100 with replacements
+ *
  * Return: no return
  */
 
-int main()
+int main(void)
 {
 	char i;
 
