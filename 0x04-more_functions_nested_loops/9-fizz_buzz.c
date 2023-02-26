@@ -1,21 +1,37 @@
 #include "main.h"
-#include <stdlib.h>
-
+#include <stdio.h>
 /**
- * print_diagonal - a function that prints straight line
- * @n: the number of times printed
+ * more_numbers - a function that prints the numbers, from 0 to 14
+ * @i: the character to be printed
+ * @m_3: the multiple of 3 to be replaced
+ * @m_3: the multiple of 5 to be replaced
+ * @m_3_5: the multiples of 3 and 5 to be replaced
  * Return: no return
  */
 
-void print_diagonal(int n)
+int main()
 {
-	int x;
+	char i;
 
+	for (i = 1; i <= 100; i++)
 	{
-		for (x = 0; x < n; x++)
+		if ((i % 3 == 0) && (i % 5 == 0))
 		{
-			_putchar('\\');
+			printf("FizzBuzz ");
 		}
-		_putchar('\n');
+		else if (i % 3 == 0)
+		{
+			printf("Fizz ");
 		}
+		else if (i % 5 == 0)
+		{
+			printf("Buzz ");
+		}
+		else
+		{
+			printf("%d ", i);
+		}
+	}
+	printf("\n");
+	return (0);
 }
