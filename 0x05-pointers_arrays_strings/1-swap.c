@@ -2,7 +2,8 @@
 
 /**
  * swap_int - a function that swaps the values of two integers
- * @n: parameter to be updated
+ * @a: first parameter to be swapped
+ * @b: second parameter to be swapped
  * Return ()
  */
 
