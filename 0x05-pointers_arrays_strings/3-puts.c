@@ -8,10 +8,15 @@
 
 int _strlen(char *s)
 {
-	int len;
+	int count = 0;
 
-	for (len = 0; s[len] != '\0'; len++)
+	while (count >= 0)
 	{
-		(return (len);
-	}
+		if (str[count] == '\0')
+		{
+			_putchar('\n');
+			break;
+		}
+		_putchar(str[count]);
+		count++;
 }
