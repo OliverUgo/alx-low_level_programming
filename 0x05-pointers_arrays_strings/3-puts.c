@@ -1,18 +1,17 @@
 #include "main.h"
 
 /**
- * _strlen - a  a function that returns the length of a string
- * @s: parameter to be measured or counte
- * Return: len
+ * _puts -  a function that prints a string, followed by a new line
+ * @str: the input sting
  */
 
-int _strlen(char *s)
+void _puts(char *str)
 {
-	int i;
+	int index;
 
-	for (i = 0; str[i] != '\0'; i++)
+	for (index = 0; str[index] != '\0'; index++)
 	{
-		_putchar(str[i]);
+		_putchar(str[index]);
 	}
 	_putchar('\n');
 }
