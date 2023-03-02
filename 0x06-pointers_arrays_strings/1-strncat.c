@@ -10,20 +10,19 @@
 
 char *_strncat(char *dest, char *src, int n);
 {
-	int count = 0, count2 = 0;
+	int i, co;
 
-	while (*(dest + count) != '\0')
+	for (i = 0; dest[i] != '\0'; i++)
 	{
-		count++;
 	}
 
-	while (count2 < n)
+	for (co = 0; co < n; co++)
 	{
-		*(dest + count) = *(src + count2);
-		if (*(src + count2) == '\0')
-			break;
-		count++;
-		count2++;
+		dest[i + co] = src[co];
+		if (src[co] == '\0')
+			co = n;
 	}
+
 	return (dest);
+}
 }
