@@ -2,9 +2,10 @@
 #include <string.h>
 
 /**
- * _strcat -  a function that copies a string
+ * _strncpy -  a function that copies a string
  * @dest: destination string
  * @src: source string
+ * @n: number of items
  * Return: copied string
  */
 
