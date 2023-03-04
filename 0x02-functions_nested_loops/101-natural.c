@@ -19,4 +19,6 @@ int main(void)
 			a += i;
 	}
 	printf("%d\n", a);
+	puts("");
+return (0);
 }
