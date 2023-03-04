@@ -11,15 +11,16 @@
 
 int main(void)
 {
-	int i, a, b, fb;
+	int i;
+	long int a, b, fb;
 
 	a = 1;
 	b = 2;
-	printf("%d, %d, ", a, b);
+	printf("%ld, %ld, ", a, b);
 	for (i = 0; i <= 48; i++)
 	{
 		fb = (a + b);
-		printf("%d, ", fb);
+		printf("%ld, ", fb);
 		a = b;
 		b = fb;
 	}
