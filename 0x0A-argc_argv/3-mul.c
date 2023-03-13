@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - a programme that prints its name
@@ -10,13 +11,13 @@
 
 int main(int argc, char *argv[])
 {
-	int i, prod = 0;
+	int prod;
 
 	if (argc > 2)
 	{
-		for (i = 1; i < argv; i++)
-		prod = atoi(argv[1] * argv[2]);
+		prod = atoi(argv[1]) * atoi(argv[2]);
 		printf("%d\n", prod);
+		return (0);
 	}
 	else
 	{
