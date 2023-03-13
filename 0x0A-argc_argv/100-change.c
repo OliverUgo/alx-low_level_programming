@@ -11,30 +11,57 @@
 
 int main(int argc, char *argv[])
 {
-	int cents, ncoins = 0;
-
-	if (argc == 1 || argc > 2)
+	if (argc != 2)
 	{
-		printf("Error\n");
+		printf("%s\n", "Error");
 		return (1);
 	}
+	else if (argc < 0)
+	{
+		return (0);
+	}
 
-	cents = atoi(argv[1]);
+	printf("%d\n", change(atoi(argv[1])));
+	return (0);
+}
+
+/**
+ * change - get change
+ * @cents: amount of coins from main function
+ * Return: change
+ */
+int change(int cents)
+{
+	int q = 25, d = 10, n = 5, t = 2, p = 1;
+	int coins;
 
 	while (cents > 0)
 	{
-		if (cents >= 25)
-			cents -= 25;
-		else if (cents >= 10)
-			cents -= 10;
-		else if (cents >= 5)
-			cents -= 5;
-		else if (cents >= 2)
-			cents -= 2;
-		else if (cents >= 1)
-			cents -= 1;
-		ncoins += 1;
+		while (cents >= q)
+		{
+			cents -= q;
+			coins++;
+		}
+		while (cents >= d)
+		{
+			cents -= d;
+			coins++;
+		}
+		while (cents >= n)
+		{
+			cents -= n;
+			coins++;
+		}
+		while (cents >= t)
+		{
+			cents -= t;
+			coins++;
+		}
+		while (cents >= p)
+		{
+			cents -= p;
+			coins++;
+		}
 	}
-	printf("%d\n", ncoins);
-	return (0);
+	return (coins);
 }
