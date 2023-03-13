@@ -32,36 +32,30 @@ int main(int argc, char *argv[])
  */
 int change(int cents)
 {
-	int q = 25, d = 10, n = 5, t = 2, p = 1;
-	int coins;
+	int coins[5] = {25, 10, 5, 2, 1};
+	int num_coins = 0, amount, i;
 
-	while (cents > 0)
+	if (argc != 2)
 	{
-		while (cents >= q)
-		{
-			cents -= q;
-			coins++;
-		}
-		while (cents >= d)
-		{
-			cents -= d;
-			coins++;
-		}
-		while (cents >= n)
-		{
-			cents -= n;
-			coins++;
-		}
-		while (cents >= t)
-		{
-			cents -= t;
-			coins++;
-		}
-		while (cents >= p)
-		{
-			cents -= p;
-			coins++;
-		}
+		printf("Error\n");
+		return (1);
 	}
-	return (coins);
+
+	amount = atoi(argv[1]);
+
+	if (amount < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
+
+	for (i = 0; i < 5; i++)
+	{
+		num_coins += amount / coins[i];
+		amount = amount % coins[i];
+	}
+
+	printf("%d\n", num_coins);
+
+	return (0);
 }
