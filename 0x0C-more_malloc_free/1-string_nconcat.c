@@ -11,39 +11,41 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *arr;
-	unsigned int i, j, co, co_2;
+	unsigned int s1len, s2len, i, j;
+	char *newMem;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-	{
-	}
+	s1len = s2len = 0;
 
-	for (j = 0; s2[j] != '\0'; j++)
-	{
-	}
+	while (s1[s1len] != '\0')
+		s1len++;
+	while (s2[s2len] != '\0')
+		s2len++;
 
-	if (n < j)
-		j = n;
+	if (n >= s2len)
+		n = s2len;
+	newMem = malloc(s1len + n + 1);
 
-	j += i;
-	arr = malloc(sizeof(char *) * (j + 1));
-
-	if (arr == NULL)
+	if (newMem == NULL)
 		return (NULL);
+	i = 0;
+	j = 0;
 
-	for (co = 0; co < i; co++)
-		arr[co] = s1[co];
-	for (co_2 = 0; co < j; co_2++)
+	while (s1[i] != '\0')
 	{
-		arr[co] = s2[co_2];
-		co++;
+		newMem[i] = s1[i];
+		i++;
 	}
-	co++;
-	arr[co] = '\0';
-	return (arr);
+	while (s2[j] != '\0' && j < n)
+	{
+		newMem[i] = s2[j];
+		i++;
+		j++;
+	}
+	newMem[i] = '\0';
+	return (newMem);
 }

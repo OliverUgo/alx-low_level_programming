@@ -12,11 +12,12 @@
 
 void *malloc_checked(unsigned int b)
 {
-	void *n;
+	int *mem;
 
-	n = malloc(b);
+	mem = malloc(b);
 
-	if (n == NULL)
+	if (mem == NULL)
 		exit(98);
-	return (n);
+
+	return (mem);
 }
